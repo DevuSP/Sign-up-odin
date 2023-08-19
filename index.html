@@ -30,7 +30,8 @@
         </div>
 
         <div class="form-input">
-            <form action="#" method="post">
+            <!-- Rather than onclick on button, using onsubmit because required does not work with onclick.  -->
+            <form action="#" onsubmit="checkPassword(); return false" method="post">
                 <div class="form">
                     <h2>Let's do this!</h2>
                     <div class="cell">
@@ -66,8 +67,8 @@
 
                 </div>
                 <!-- return false stop form to reset quickly on its own. -->
+                <button type="submit">Create Account</button>
             </form>
-            <button type="submit" onclick="checkPassword(); return false">Create Account</button>
             <p>Already have a account? <a href="#login">Sign in</a></p>
         </div>
     </div>
