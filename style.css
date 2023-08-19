@@ -20,7 +20,7 @@
 
 .image-name {
     grid-row: span 2;
-    background: url("/images/sunflower.jpg") center center no-repeat;
+    background: url("images/sunflower.jpg") center center no-repeat;
     background-size: cover;
     height: 100vh;
 }
