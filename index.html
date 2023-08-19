@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <!-- linking css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="image-name">
+            <div class="heading">
+                <h1><img src="/images/Daco_1081132.png" alt="Logo">PARMAR'S</h1>
+            </div>
+        </div>
+
+        <div class="para-head">
+            <p>
+                <span style="color: brown; font-weight: 700;">This is not a real service website! </span>You know you
+                need this in your life to realize your deepest dreams. Sign up now and get started. </br> </br>
+                You <em>know</em> you want this.
+            </p>
+        </div>
+
+        <div class="form-input">
+            <form action="#">
+                <div class="form">
+                    <h2>Let's do this!</h2>
+                    <div class="cell">
+                        <label for="firstName">FIRST NAME: </label> </br>
+                        <input type="text" name="firstName" id="firstName" required>
+                    </div>
+                    
+                    <div class="cell">
+                        <label for="lastName">LAST NAME: </label> </br>
+                        <input type="text" name="lastName" id="lastName">
+                    </div>
+
+                    <div class="cell"> 
+                        <label for="email">EMAIL: </label> </br>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+
+                    <div class="cell">
+                        <label for="phoneNumber">PHONE NUMBER: </label> </br>
+                        <input type="number" name="phoneNumber" id="phoneNumber">
+                    </div>
+
+                    <div class="cell">
+                        <label for="password">PASSWORD: </label> </br>
+                        <input type="password" name="password" id="password" required>
+                        <p style="color: red; font-size: small; margin: 0;" id="wrongPassword"></p>
+                    </div>
+
+                    <div class="cell">
+                        <label for="confirmPassword">CONFIRM PASSWORD: </label> </br>
+                        <input type="password" name="confirmPassword" id="confirmPassword" required>
+                    </div>
+
+                </div>
+                <!-- return false stop form to reset quickly on its own. -->
+                <button type="submit" onclick="checkPassword(); return false">Create Account</button>
+            </form>
+            <p>Already have a account? <a href="#login">Sign in</a></p>
+        </div>
+    </div>
+
+<!-- Class correctPassword will be hidden and show only when password is correct. -->
+    <div class="correctPassword" id="correctPassword">
+        <div>
+            <h1>Thank You for Signing up.</h1>
+            <label for="fname" class="cell-2">FIRST NAME: <p id="fname"></p></label>
+            <label for="lname" class="cell-2">LAST NAME: <p id="lname"></p></label>
+            <label for="phone" class="cell-2">PHONE NUMBER: <p id="cor-phoneNumber"></p></label>
+            <label for="email" class="cell-2">EMAIL: <p id="cor-email"></p></label>
+        </div>
+    </div>
+    
+<script src="/script.js"></script>
+</body>
+
+</html>

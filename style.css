@@ -1,0 +1,238 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    font-family: 'Abel', sans-serif;
+    --dark-green-color: #4d542a;
+    --yellow-color: rgb(232 194 4 / 24%);
+    --dark-yellow-color: rgb(172, 166, 11);
+    --background-color: #9c9b9b14;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 35% auto;
+    grid-template-rows: 28% auto;
+    height: 100vh;
+    background-color: var(--background-color);
+}
+
+.image-name {
+    grid-row: span 2;
+    background: url("/images/sunflower.jpg") center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.heading {
+    height: 55%;
+    display: flex;
+    align-items: center;
+}
+
+img {
+    width: 25px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.heading>h1 {
+    width: 100%;
+    font-size: 4rem;
+    background-color: var(--yellow-color);
+    color: var(--dark-green-color);
+    text-align: center;
+    padding: 15px;
+}
+
+.para-head>p {
+    margin: 80px 140px 0 60px;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: repeat(3, 60px);
+    background-color: white;
+    padding: 20px 0 20px 60px;
+    margin-left: 1px;
+    box-shadow: 0px 3px 8px #403f3f6e;
+}
+
+.form h2 {
+    grid-column: span 2;
+}
+
+label {
+    font-weight: 600;
+}
+
+input {
+    width: 200px;
+    height: 18px;
+    border-radius: 4px;
+    padding: 3px;
+    font-weight: 600;
+    border: 1px solid rgb(0 0 0 / 24%);
+}
+
+input:focus {
+    outline: none !important;
+    border: 1px solid rgba(59, 102, 245, 0.968);
+    box-shadow: 1px 2px 3px #00000080;
+}
+
+.cell {
+    padding-bottom: 5px;
+}
+
+button {
+    margin: 30px 0 30px 60px;
+    width: 180px;
+    height: 40px;
+    font-size: 1.3rem;
+    background-color: var(--yellow-color);
+    border-radius: 8px;
+    font-weight: 800;
+}
+
+button:hover {
+    background-color: var(--dark-yellow-color);
+    color: white;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.304);
+}
+
+.form-input p {
+    margin: 0 0 0 60px;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: var(--dark-yellow-color);
+}
+
+/* correct password */
+
+.correctPassword {
+    /* display: flex; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background-color);
+}
+
+.correctPassword>div {
+    width: 650px;
+    height: 300px;
+    border-radius: 8px;
+    background-color: var(--yellow-color);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 40% 40%;
+}
+
+.correctPassword h1 {
+    grid-column: span 2;
+    margin-top: 20px;
+    text-align: center;
+    color: green;
+}
+
+.correctPassword label {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.correctPassword p {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.cell-2 {
+    padding: 0;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+/* to toggle display to for js.  */
+
+.displayNone {
+    display: none !important;
+}
+
+.displayFlex {
+    display: flex !important;
+}
+
+@media only screen and (max-width: 1100px) {
+    .para-head>p {
+        margin: 50px 80px 0 40px;
+    }
+
+    img {
+        width: 25px;
+        height: 50px;
+        margin-right: 0;
+    }
+
+    .form {
+        grid-template-columns: repeat(2, 200px);
+        padding: 20px 0 20px 40px;
+    }
+
+    input {
+        width: 140px;
+        padding: 3px;
+    }
+
+    button {
+        margin: 30px 0 30px 40px;
+        width: 140px;
+        height: 40px;
+        border-radius: 7px;
+    }
+
+    .form-input p {
+        margin: 0 0 0 40px;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    .heading>h1 {
+        font-size: 3.5rem;
+        padding: 10px;
+    }
+
+    img {
+        width: 20px;
+        height: 40px;
+        margin-right: 0;
+    }
+
+    .para-head>p {
+        margin: 20px 40px 0 40px;
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    .image-name {
+        display: none;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        height: 100vh;
+        background-color: #9c9b9b14;
+    }
+}
