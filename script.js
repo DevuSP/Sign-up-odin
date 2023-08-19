@@ -22,7 +22,7 @@ function checkPassword() {
     let password = document.getElementById("password").value
     let confirmPassword = document.getElementById("confirmPassword").value
     // if password and confirmPassword is kept blank it won't submit the form.
-    if(password ===""){return}
+    if(password === "" || confirmPassword === ""){return}
     // if password correct show this 
     let correctPassword = document.getElementById("correctPassword")
     // if password wrong stay in same page 
