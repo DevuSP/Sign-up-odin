@@ -1,3 +1,5 @@
+html,
+body,
 *,
 *::after,
 *::before {
@@ -71,7 +73,7 @@ label {
 }
 
 input {
-    width: 200px;
+    width: 80%;
     height: 18px;
     border-radius: 4px;
     padding: 3px;
@@ -190,7 +192,6 @@ a:hover {
     }
 
     input {
-        width: 140px;
         padding: 3px;
     }
 
@@ -235,4 +236,17 @@ a:hover {
         height: 100vh;
         background-color: #9c9b9b14;
     }
+
+}
+
+@media only screen and (max-width: 490px) {
+    .form {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding: 20px 0 20px 40px;
+        margin-left: 1px;
+        box-shadow: 0px 3px 8px #403f3f6e;
+    }
+
 }
